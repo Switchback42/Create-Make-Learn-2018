@@ -1,15 +1,17 @@
 /*
 lilypad_neopixel_play
-This code originally came from the Electronic Handbag Project.  You can still find it on the Way Back Machine
+
+You can find the original code that this sketch is based upon on the Way Back Machine at:
 https://web.archive.org/web/20170228191434/http://www.electronicfashion.co.uk/workshop_checklists.htm
-This particular sketch has been customized for the LilyPad
+
+This sketch has been customized for the LilyPad
 Please visit https://www.rapidtables.com/web/color/pink-color.html to find additional hexcodes for changing colors
 */
 
 // Coding e-Textiles:  Create Make Learn 2018
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 5 // You can change this, but the circuit I asked you to make uses Pin 5.
+#define PIN 5 // almost any pin would work here
  
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(4, PIN);
  
