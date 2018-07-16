@@ -8,7 +8,7 @@ Please visit https://www.rapidtables.com/web/color/pink-color.html to find addit
 // Coding e-Textiles 2018
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 11
+#define PIN 5 // You can change this :)
  
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(4, PIN);
  
