@@ -9,7 +9,7 @@ Please visit https://www.rapidtables.com/web/color/pink-color.html to find addit
 // Coding e-Textiles:  Create Make Learn 2018
 #include <Adafruit_NeoPixel.h>
 
-#define PIN 5 // You can change this :)
+#define PIN 5 // You can change this, but the circuit I asked you to make uses Pin 5.
  
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(4, PIN);
  
