@@ -1,4 +1,5 @@
 /*
+lilypad_neopixel_play
 This code originally came from the Electronic Handbag Project.  You can still find it on the Way Back Machine
 https://web.archive.org/web/20170228191434/http://www.electronicfashion.co.uk/workshop_checklists.htm
 This particular sketch has been customized for the LilyPad
