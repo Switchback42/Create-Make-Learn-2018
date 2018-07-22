@@ -9,6 +9,8 @@ Please visit https://www.rapidtables.com/web/color/pink-color.html to find addit
 */
 
 // Coding e-Textiles:  Create Make Learn 2018
+// Presentation and Workshop by Jill Dawson
+
 #include <Adafruit_NeoPixel.h>
 
 #define PIN 5 // almost any pin would work here
