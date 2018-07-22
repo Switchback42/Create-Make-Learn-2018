@@ -12,7 +12,7 @@ Please visit https://www.rapidtables.com/convert/color/index.html to find additi
 // Coding e-Textiles:  Create Make Learn 2018 
 // Presentation and workshop by Jill Dawson
 #include <Adafruit_NeoPixel.h> // This sketch requires you to download the Adafruit_NeoPixel library, which will give
-                               // You access to some useful sample code
+                               // you access to some useful sample code
 
 #define NEOPIN 5    // This is the number of the pad that connects to the NeoPixel's data-in pin
 #define NUMPIXELS 4 // This is the number of NeoPixels in the strand
