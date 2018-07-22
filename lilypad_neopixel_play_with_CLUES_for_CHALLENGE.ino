@@ -10,7 +10,7 @@ Please visit https://www.rapidtables.com/convert/color/index.html to find additi
 */
 
 // Coding e-Textiles:  Create Make Learn 2018 
-// Presentation by Jill Dawson
+// Presentation and workshop by Jill Dawson
 #include <Adafruit_NeoPixel.h> // This sketch requires you to download the Adafruit_NeoPixel library, which will give
                                // You access to some useful sample code
 
