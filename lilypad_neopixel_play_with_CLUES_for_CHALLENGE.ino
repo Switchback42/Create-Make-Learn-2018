@@ -28,8 +28,8 @@ uint32_t color1 = 0xff000, // red
 void setup() {
   pixels.begin();
   pixels.setBrightness(85);  // What would happen if you changed this value?
-  //pinMode(LED1, OUTPUT);   //  What might this line do?  It is NOT currently being used in this sketch.
-  //digitalWrite(LED1, LOW); //What might this line do?  It is NOT currently being used in this sketch.
+  //pinMode(LED1, OUTPUT);   // What might this line do?  It is NOT currently being used in this sketch.
+  //digitalWrite(LED1, LOW); // What might this line do?  It is NOT currently being used in this sketch.
 }
  
 void loop() {
