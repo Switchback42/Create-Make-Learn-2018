@@ -8,8 +8,8 @@
  */
 
  
-const int buttonPin = A5; //Clip a momentary push-button to pin A5.  This pin has an internal pull-up resistor.
-                          //This pull-up resistor will allow you to not worry about adding a resistor here.
+const int buttonPin = A5; //Sew a momentary push-button to pin A5 (and ground).  This pin has an internal pull-up resistor.
+                          //This integrated pull-up resistor means you don't have to add one.
 
 int led1 = 5; //Feel free to change these pins...you could add more than one LED, sewn in parallel, to each pin for a
               //more dynamic light-up effect
