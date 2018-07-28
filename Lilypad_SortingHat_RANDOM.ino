@@ -4,6 +4,7 @@
  I was intrigued by your idea for generating random numbers, so I 
  figured out a way to do it.
  Feel free to tweak, modify, use, or discard this code.
+ Courtesy of Jill Dawson
  */
 
  
