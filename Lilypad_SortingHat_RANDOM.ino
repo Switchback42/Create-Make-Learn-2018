@@ -22,15 +22,17 @@ long randNumber; //This will help you get your random number
 
 void setup(){
   Serial.begin(115200); //Your serial monitor, which you can look at by clicking on the little magnifying glass in the top
-                        //right corner of this screen...AFTER YOU'VE UPLOADED YOUR CODE, my default to a baud rate or 9600.  
-                        //So, if you don't see anything in your serial monitor, change the 115200 to 9600.
+                        //right corner of this screen...AFTER YOU'VE UPLOADED YOUR CODE, my default to a baud rate of 9600.  
+                        //So, if you don't see anything in your serial monitor, change the 115200 I used to 9600.
                         
 
   pinMode(buttonPin, INPUT_PULLUP);// Lilypad buttons, on pin A5, need to use an internal pullup resistor
+  
   pinMode (led1, OUTPUT); // Set your LEDs as OUTPUTs
   pinMode (led2, OUTPUT);
   pinMode (led3, OUTPUT);
   pinMode (led4, OUTPUT);
+  
   digitalWrite (led1, LOW); //This code sets the LEDs OFF to start
   digitalWrite (led2, LOW);
   digitalWrite (led3, LOW);
@@ -42,7 +44,7 @@ void loop() {
   int buttonState; //this is a variable to keep track of the value of your push button
   buttonState = digitalRead(buttonPin); // read the state of the pushbutton value
   
-  if (buttonState == LOW) //If the button is pushed ...I know...this isn't intuitive
+  if (buttonState == LOW) //If the button is pushed
     {
   // print a random number from 1 to 4
   randNumber = random(1, 5); // If you want the range to include a total of 4 number choices (for 4 houses) start at 1 and end at 5.
