@@ -1,7 +1,7 @@
 /*
  Lilypad_SortingHat_RANDOM_with_EXTRA_BLING
  
- This code could work for your sorting hat, using a Lilypad Arduino.
+ Carrie, this code could work for your sorting hat, using a Lilypad Arduino.
  I was intrigued by your idea for generating random numbers, so I 
  figured out a way to do it.
  
