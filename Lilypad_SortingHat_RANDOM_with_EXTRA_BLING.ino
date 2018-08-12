@@ -37,7 +37,7 @@ void setup(){
   Serial.begin(115200); 
   /*
   Your serial monitor, which you can look at by clicking on the little magnifying glass in the top
-  right corner of this screen...AFTER YOU'VE UPLOADED YOUR CODE, my default to a baud rate or 9600.  
+  right corner of this screen...AFTER YOU'VE UPLOADED YOUR CODE, may default to a baud rate of 9600.  
   So, if you don't see anything in your serial monitor, change the 115200 to 9600.
    */
                         
