@@ -10,7 +10,7 @@
  I added a function to the bottom of this sketch called oneOnAtATime()
  to add some flashy lights before the random pin gets selected.
 
- When using this with kids, have them reach into the hat and push the button tp generate their house.
+ When using this with kids, have them reach into the hat and push the button to generate their house.
  They may need to keep it pressed down for more than a second.
  */
 
