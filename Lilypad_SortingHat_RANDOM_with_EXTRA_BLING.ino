@@ -59,8 +59,8 @@ void setup(){
 }
 
 void loop() {
-  int buttonState; //this is a variable to keep track of the value of your push button
-  buttonState = digitalRead(buttonPin); // read the state of the pushbutton value
+  int buttonState; // this is a variable to keep track of the value of your push button
+  buttonState = digitalRead(buttonPin); // read the state of the push button value
   
   if (buttonState == LOW) //if the button is pushed
     {
