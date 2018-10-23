@@ -1,12 +1,21 @@
 /*
 Ugly Christmas Sweater Dec18
 /*
-Be careful using the serial monitor, because there are two sensors (& a random number generator) in the code. 
-I wrote the code for "Rudolph," the temperature & light sensors, and "Baby, It's Cold Outside". 
-To get the music to flash with LEDs, I borrowed liberally from an Instructable (that didn't actually compile).
-My Neo-Pixel code came, in part, from Adafruit (and Becky Stern's Light-Up Heart tutorial).
+Created by Jill Dawson
+23 October 2018
+
+I'm using a LilyPad Arduino, Lilypad Sensors, Neo-Pixels, and LilyPad LEDs.
+Be careful using the serial monitor, because there are two sensors (and a random number generator) in the code. 
+ 
+To get the music to flash with LEDs, I borrowed liberally from an Instructable (which didn't actually compile).
+The link is here: https://www.instructables.com/id/Lilypad-Arduino-Christmas-Sweater-with-Blinking-Li/
+
+My Neo-Pixel code came, in part, from Adafruit (and Becky Stern's Light-Activated Pixel Heart tutorial).
+The link is here: https://learn.adafruit.com/light-activated-pixel-heart/stitch-circuit
+
+I wrote the code for "Rudolph," the temperature & light sensors, and "Baby, It's Cold Outside".
 I figured out that I needed to use an internal pull-up resistor and an analog pin in the code for the push button (LilyPad).
-The push button toggles the music on and off when pressed.
+The push button toggles the music on or off when pressed.
 I added a random function to select a random song choice.
 The temperature sensor controls Rudolph's nose and a small motor. 
 A light sensor triggers a NeoPixel animation.
@@ -27,9 +36,9 @@ int buttonPin = A1; //Sew a Lilypad Button Board to pin A1 or A5.  These pins ha
 int led1 = 4; 
 int led2 = 8; 
 int led3 = 9;
-int led4 = 6;   //pwm (if needed for something else)
-int motor = 3;  //I haven't decided what to do with this motor yet.
-int led5 = 5;   //pwm/ nose will turn on with motor, triggered by temperature sensor
+int led4 = 6;   //pwm capabilities (if needed)
+int motor = 3;  //the motor is triggered by the temperature sensor.
+int led5 = 5;   //pwm capabilities/ Rudolph's nose will turn on with motor, triggered by temperature sensor
 int sensorPin = A2;
 int sensorValue;
 
@@ -65,21 +74,20 @@ void loop() {
 lightValue = analogRead(lightSensor); //LIGHT SENSOR
 //Serial.println(lightValue); 
 delay(100);
-if(lightValue<=20){
+if(lightValue<=20){ //pretty dark
   colorWipe(strip.Color(0,255,0),50);
 }else{
   colorWipe(strip.Color(0,0,0),50);
 }
 delay(2);
-  
+
+//Rudolph's nose is temperature sensitive
 sensorValue = analogRead(sensorPin); //TEMPERATURE SENSOR
 //Serial.println(sensorValue);
 delay(100);
-//When the push button turns on the music, the serial monitor appears to stop recording temperture data,  
-//but the sensor still works...it may reset the light display if it's triggered for a long time
-if(sensorValue >=150) //defaults >=250 turns on when it's hot; <=150 turns on when it's cold; >=190 turns on with warm hand
-//The push button turns off the music, so you won't drive yourself (or your friends) crazy!
-//Rudolph's nose is temperature sensitive
+//When the push button is pressed, the serial monitor appears to stop recording temperature data.  
+//The sensor still works.
+if(sensorValue >=150) // >=250 turns on when it's hot; <=150 turns on when it's cold; >=150 turns on with warm hand
 {
   digitalWrite(led5, HIGH); // turns on Rudolph's nose
   digitalWrite(motor, HIGH); // turns motor on
@@ -114,13 +122,13 @@ else
 3= Deck the Halls
 4= Rudolph 
 */
-
-randNumber = random(1,5); //print a random number from 1 to 4
+randNumber = random(1,5); //select a random number from 1 to 4
 //Serial.println(randNumber); //RANDOM NUMBER 
 songChoice = randNumber;
-//songChoice = 2; //could I make this random?
+//songChoice = 2; //uncomment if you prefer not to use the random feature
 alternateLeds(); //whatever function you have here will run quietly when button not pushed, even if temp sensor is triggered.
 
+//The push button turns off the music, so you won't drive yourself (or your friends) crazy!
 updateSwitchState();
 if (switchState == HIGH) {
 playTune(songChoice); 
@@ -263,4 +271,3 @@ void colorWipe(uint32_t c, uint8_t wait){
     delay(wait);
   }
 }
-
