@@ -21,7 +21,7 @@ Please visit https://www.rapidtables.com/convert/color/index.html to find additi
  
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, NEOPIN); 
  
-uint32_t color1 = 0xff000, // red  
+uint32_t color1 = 0xff0000, // red  
          color2 = 0x00ff00, // green
          color3 = 0x0000ff; // blue
      
